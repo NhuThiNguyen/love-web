@@ -180,6 +180,28 @@
             <button id="closeSidebarBtn" class="close-sidebar-btn" aria-label="Đóng menu">✕</button>
         </div>
 
+        <!-- COUPLE IDENTITY CARD (HỒ SƠ 2 NGƯỜI & TRẠNG THÁI ONLINE) -->
+        <div class="sidebar-couple-card">
+            <div class="couple-avatars">
+                <div class="avatar-wrap user-1-wrap active-user-ring" id="avatarUser1Wrap" title="Người 1: Như 👩">
+                    <span class="avatar-emoji">👩</span>
+                    <span class="user-status-dot online"></span>
+                </div>
+                <div class="couple-heart-link">❤️</div>
+                <div class="avatar-wrap user-2-wrap" id="avatarUser2Wrap" title="Người 2: Người yêu 👨">
+                    <span class="avatar-emoji">👨</span>
+                    <span class="user-status-dot online" id="partnerStatusDot"></span>
+                </div>
+            </div>
+            <div class="couple-names-info">
+                <span class="current-user-badge" id="currentUserBadge">Bạn đang là: <strong>Như 👩</strong></span>
+                <span class="partner-online-status" id="partnerOnlineStatus">🟢 Người yêu đang online</span>
+            </div>
+            <button id="switchUserBtn" class="switch-user-btn" title="Chuyển đổi giữa 2 tài khoản để trải nghiệm">
+                ⇄ Đổi vai: <span id="switchUserTargetText">Người yêu 👨</span>
+            </button>
+        </div>
+
         <!-- MENU ITEMS -->
         <nav class="sidebar-nav">
             <button class="nav-item active" data-page="homePage">
@@ -190,6 +212,11 @@
                 <span class="nav-icon">💕</span>
                 <span class="nav-text">Ngày yêu</span>
                 <span class="nav-badge" id="navDayBadge">...</span>
+            </button>
+            <button class="nav-item" data-page="activityPage">
+                <span class="nav-icon">📜</span>
+                <span class="nav-text">Hoạt động chung</span>
+                <span class="nav-badge new-badge" id="navActivityBadge">Mới</span>
             </button>
             <button class="nav-item" data-page="letterPage">
                 <span class="nav-icon">💌</span>
@@ -202,6 +229,10 @@
             <button class="nav-item" data-page="photoAlbumPage">
                 <span class="nav-icon">📸</span>
                 <span class="nav-text">Hình ảnh của chúng mình</span>
+            </button>
+            <button class="nav-item" data-page="memoriesPage">
+                <span class="nav-icon">📖</span>
+                <span class="nav-text">Kỷ niệm của chúng mình</span>
             </button>
             <button class="nav-item" data-page="musicPage">
                 <span class="nav-icon">🎵</span>
@@ -218,7 +249,7 @@
             </button>
             <button class="nav-item" data-page="storagePage">
                 <span class="nav-icon">💾</span>
-                <span class="nav-text">Dữ liệu / Lưu trữ</span>
+                <span class="nav-text">Dữ liệu & Kết nối</span>
             </button>
         </nav>
 
@@ -415,25 +446,30 @@
                     <p>Có một điều em muốn nói với anh...</p>
                 </div>
 
-                <!-- PHONG THƯ TƯƠNG TÁC GỐC -->
+                <!-- PHONG THƯ TƯƠNG TÁC -->
                 <div id="envelopeArea" class="envelope-area">
-                    <div class="envelope">
+                    <div class="envelope" title="Nhấn để mở / đóng lá thư">
                         <div class="envelope-back"></div>
                         <div class="letter-paper">
-                            <h2>Dear My Love,</h2>
-                            <p>Em không biết phải bắt đầu từ đâu để nói hết những điều em muốn nói với anh.</p>
-                            <p>Chỉ biết rằng từ khi có anh, những ngày bình thường của em cũng trở nên thật đặc biệt.</p>
-                            <p>Cảm ơn anh vì đã xuất hiện, đã yêu thương và ở bên cạnh em.</p>
-                            <p>Em hy vọng chúng ta sẽ còn cùng nhau đi qua thật nhiều mùa nữa.</p>
-                            <p class="letter-love">Yêu anh rất nhiều ❤️</p>
+                            <div class="letter-paper-inner">
+                                <span class="letter-stamp">💌</span>
+                                <h2>Dear My Love,</h2>
+                                <p>Em không biết phải bắt đầu từ đâu để nói hết những điều em muốn nói với anh.</p>
+                                <p>Chỉ biết rằng từ khi có anh, những ngày bình thường của em cũng trở nên thật đặc biệt.</p>
+                                <p>Cảm ơn anh vì đã xuất hiện, đã yêu thương và ở bên cạnh em.</p>
+                                <p>Em hy vọng chúng ta sẽ còn cùng nhau đi qua thật nhiều mùa nữa.</p>
+                                <p class="letter-love">Yêu anh rất nhiều ❤️</p>
+                            </div>
                         </div>
                         <div class="envelope-front"></div>
-                        <div class="envelope-flap"></div>
+                        <div class="envelope-flap">
+                            <div class="envelope-seal"><span>❤️</span></div>
+                        </div>
                         <div id="letterHearts" aria-hidden="true">
                             <img src="images/Happy Fun Sticker by Pen Pals.gif" alt="Trái tim bay ra từ lá thư">
                         </div>
                     </div>
-                    <p id="envelopeHint">Nhấn vào phong thư ❤️</p>
+                    <p id="envelopeHint">Nhấn vào phong thư để mở ❤️</p>
                 </div>
 
                 <!-- KHU VỰC VIẾT THÊM LỜI NHẮN YÊU THƯƠNG -->

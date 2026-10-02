@@ -751,22 +751,30 @@ let envelopeOpened = false;
 
 if (envelope) {
     envelope.addEventListener("click", function () {
-        if (envelopeOpened) return;
-        envelopeOpened = true;
-        envelope.classList.add("open");
+        if (!envelopeOpened) {
+            envelopeOpened = true;
+            envelope.classList.add("open");
 
-        if (envelopeHint) {
-            envelopeHint.textContent = "❤️ Một lá thư dành riêng cho anh ❤️";
-        }
+            if (envelopeHint) {
+                envelopeHint.textContent = "Nhấn vào phong thư để gập lại 💌";
+            }
 
-        setTimeout(function () {
             if (letterHearts) {
+                letterHearts.classList.remove("show");
+                void letterHearts.offsetWidth;
                 letterHearts.classList.add("show");
                 setTimeout(function () {
                     letterHearts.classList.remove("show");
-                }, 2000);
+                }, 2200);
             }
-        }, 700);
+        } else {
+            envelopeOpened = false;
+            envelope.classList.remove("open");
+
+            if (envelopeHint) {
+                envelopeHint.textContent = "Nhấn vào phong thư để mở ❤️";
+            }
+        }
     });
 }
 
