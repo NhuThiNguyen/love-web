@@ -3,24 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Love Story ❤️</title>
-
-    <link rel="stylesheet"
-        href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- =====================================================
-     1. TRANG LỜI CHÀO
+     1. TRANG LỜI CHÀO (INTRO)
 ===================================================== -->
-
-<section id="introScreen"
-        class="screen active">
+<section id="introScreen" class="screen active">
     <div class="intro-content intro-game">
         <div class="intro-title">
             <h1>
@@ -31,43 +24,43 @@
         </div>
         <div class="bee-scene" id="beeScene">
             <img src="images/sun sustainability Sticker by GQ Italia.gif"
-            alt="Sun animation"
-            class="sun-gif">
+                 alt="Sun animation"
+                 class="sun-gif">
 
             <img src="images/Cloud Sticker.gif"
-            alt="Cloud"
-            class="cloud cloud-one">
+                 alt="Cloud"
+                 class="cloud cloud-one">
 
             <img src="images/Happy Day Sticker by stephlamdesign.gif"
-            alt="Cloud"
-            class="cloud cloud-two">
+                 alt="Cloud"
+                 class="cloud cloud-two">
 
             <button id="beeButton"
                     class="bee-button"
                     aria-label="Bấm con ong để bắt đầu">
                 <img src="images/Fly Love Sticker by Guy with Red Beard.gif"
-                alt="Bee flying"
-                class="bee-gif">
+                     alt="Bee flying"
+                     class="bee-gif">
             </button>
         </div>
     </div>
 </section>
+
 <!-- =====================================================
      2. TRANG MẬT KHẨU
 ===================================================== -->
-<section id="passwordScreen"
-        class="screen">
+<section id="passwordScreen" class="screen">
     <div class="password-container">
         <!-- ẢNH -->
         <div class="password-photo">
             <div class="photo-frame">
                 <div class="photo-badge">
                     <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"
-                    alt="Love gif">
+                         alt="Love gif">
                 </div>
                 <div class="photo-frame-inner">
                     <img src="images/totnghiep.jpg"
-                    alt="Ảnh của chúng ta">
+                         alt="Ảnh của chúng ta">
                 </div>
                 <span class="photo-frame-caption">
                     Hai đứa mình ❤️
@@ -85,8 +78,7 @@
                 ngày sinh của em
             </h2>
             <!-- 6 DOT -->
-            <div id="passwordDots"
-                class="password-dots">
+            <div id="passwordDots" class="password-dots">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -96,64 +88,31 @@
             </div>
             <!-- KEYPAD -->
             <div class="keypad">
-                <button class="number-button"
-                        data-number="1">
-                    <span>1</span>
-                </button>
-                <button class="number-button"
-                        data-number="2">
-                    <span>2</span>
-                </button>
-                <button class="number-button"
-                        data-number="3">
-                    <span>3</span>
-                </button>
-                <button class="number-button"
-                        data-number="4">
-                    <span>4</span>
-                </button>
-                <button class="number-button"
-                        data-number="5">
-                    <span>5</span>
-                </button>
-                <button class="number-button"
-                        data-number="6">
-                    <span>6</span>
-                </button>
-                <button class="number-button"
-                        data-number="7">
-                    <span>7</span>
-                </button>
-                <button class="number-button"
-                        data-number="8">
-                    <span>8</span>
-                </button>
-                <button class="number-button"
-                        data-number="9">
-                    <span>9</span>
-                </button>
+                <button class="number-button" data-number="1"><span>1</span></button>
+                <button class="number-button" data-number="2"><span>2</span></button>
+                <button class="number-button" data-number="3"><span>3</span></button>
+                <button class="number-button" data-number="4"><span>4</span></button>
+                <button class="number-button" data-number="5"><span>5</span></button>
+                <button class="number-button" data-number="6"><span>6</span></button>
+                <button class="number-button" data-number="7"><span>7</span></button>
+                <button class="number-button" data-number="8"><span>8</span></button>
+                <button class="number-button" data-number="9"><span>9</span></button>
                 <div></div>
-                <button class="number-button"
-                        data-number="0">
-                    <span>0</span>
-                </button>
-                <button id="deleteButton"
-                        class="number-button delete-button">
-                    <span>×</span>
-                </button>
+                <button class="number-button" data-number="0"><span>0</span></button>
+                <button id="deleteButton" class="number-button delete-button"><span>×</span></button>
             </div>
         </div>
     </div>
 </section>
+
 <!-- =====================================================
      POPUP SAI MẬT KHẨU
 ===================================================== -->
-<div id="wrongPasswordPopup"
-     class="popup-overlay">
+<div id="wrongPasswordPopup" class="popup-overlay">
     <div class="popup-box sad-popup">
         <img src="images/Spank Bad Boy Sticker by jerseycouple.gif"
-            alt="Sad"
-            class="popup-gif">
+             alt="Sad"
+             class="popup-gif">
         <h2>
             Đấm cho cái giờ 
         </h2>
@@ -164,15 +123,15 @@
         </p>
     </div>
 </div>
+
 <!-- =====================================================
      POPUP ĐÚNG MẬT KHẨU
 ===================================================== -->
-<div id="correctPasswordPopup"
-     class="popup-overlay correct-password-overlay">
+<div id="correctPasswordPopup" class="popup-overlay correct-password-overlay">
     <div class="popup-box correct-popup-box">
         <img src="images/Kissing Kiss Me Sticker by jerseycouple.gif"
-            alt="Happy"
-            class="popup-gif">
+             alt="Happy"
+             class="popup-gif">
         <h2>
             CHÚC MỪNG ANH! 🎉
         </h2>
@@ -183,584 +142,742 @@
             <br>
             mà em đã chuẩn bị cho anh nhé ❤️
         </p>
-        <button id="continueButton"
-                class="main-button">
+        <button id="continueButton" class="main-button">
             TIẾP TỤC ❤️
         </button>
     </div>
-    <!-- Đổi tên file nếu GIF pháo hoa của em có tên khác -->
     <img src="images/Fireworks Celebrate Sticker by AhaSlides.gif"
-    alt="Pháo hoa chúc mừng"
-    class="fireworks-gif">
-</div>
-<!-- =====================================================
-     3. TRANG MENU CHÍNH
-===================================================== -->
-<section id="homeScreen"
-        class="screen">
-    <div class="home-container">
-        <div class="home-title">
-            <span>❤️</span>
-            <h1>
-                Our Love Story
-            </h1>
-            <p>
-                Anh muốn mở món quà nào trước?
-            </p>
-        </div>
-        <div class="menu-grid">
-            <!-- MUSIC -->
-            <div class="menu-card"
-                data-page="musicPage">
-                <div class="card-icon">
-                    🎵
-                </div>
-                <h2>
-                    Âm nhạc
-                </h2>
-                <p>
-                    Những bài hát kể câu chuyện
-                    của chúng ta.
-                </p>
-                <span>
-                    Mở ra →
-                </span>
-            </div>
-            <!-- IMAGE -->
-            <div class="menu-card"
-                data-page="galleryPage">
-                <div class="card-icon">
-                    🌌
-                </div>
-                <h2>
-                    Hình ảnh
-                </h2>
-                <p>
-                    Những khoảnh khắc em muốn
-                    giữ mãi.
-                </p>
-                <span>
-                    Mở ra →
-                </span>
-            </div>
-            <!-- LETTER -->
-            <div class="menu-card"
-                data-page="letterPage">
-                <div class="card-icon">
-                    💌
-                </div>
-                <h2>
-                    Lá thư
-                </h2>
-                <p>
-                    Điều em chưa từng nói
-                    hết với anh.
-                </p>
-                <span>
-                    Mở ra →
-                </span>
-            </div>
-            <!-- GIFT -->
-            <div class="menu-card"
-                data-page="giftPage">
-                <div class="card-icon">
-                    🎁
-                </div>
-                <h2>
-                    Quà tặng
-                </h2>
-                <p>
-                    Món quà cuối cùng đang
-                    chờ anh.
-                </p>
-                <span>
-                    Mở ra →
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- =====================================================
-     CÁC TRANG CON
-===================================================== -->
-
-<!-- =====================================================
-     MUSIC PAGE
-===================================================== -->
-<section id="musicPage"
-        class="sub-page">
-    <button class="back-button">
-        ← Quay lại
-    </button>
-    <div class="page-title">
-        <span>🎵</span>
-        <h1>
-            Những bài hát của gửi 
-        </h1>
-        <p>
-            Mỗi bài hát là một chút ký ức.
-        </p>
-    </div>
-    <div class="music-layout">
-        <!-- PLAYER -->
-        <div class="music-player">
-            <div id="record"
-                class="record">
-                <div class="record-center">
-                    ❤
-                </div>
-            </div>
-            <div class="track-meta">
-                <h2 id="songTitle">
-                    Perfect
-                </h2>
-                <p id="songArtist">
-                    Ed Sheeran
-                </p>
-            </div>
-            <div class="progress-container">
-                <span id="currentTime">
-                    0:00
-                </span>
-                <input type="range"
-                    id="progressBar"
-                    value="0"
-                    min="0"
-                    max="100">
-                <span id="duration">
-                    0:00
-                </span>
-            </div>
-            <div class="music-controls">
-                <button id="prevButton">
-                    ⏮
-                </button>
-                <button id="playButton"
-                        class="play-button">
-                    ▶
-                </button>
-                <button id="nextButton">
-                    ⏭
-                </button>
-            </div>
-            <div class="playlist"
-                id="playlist">
-            </div>
-            <audio id="audioPlayer"></audio>
-        </div>
-        <!-- LYRICS -->
-        <div class="lyrics-area">
-            <h2>
-                🎤 Lời nhắn dành cho anh
-            </h2>
-            <div id="lyrics"
-                class="lyrics">
-                <p class="active-line">
-                    Có những ngày bình thường
-                    nhưng lại trở nên đặc biệt.
-                </p>
-                <p>
-                    Chỉ vì ngày hôm đó
-                    em có anh bên cạnh.
-                </p>
-                <p>
-                    Và em mong rằng
-                    chúng ta sẽ còn thật nhiều
-                    ngày như thế nữa.
-                </p>
-            </div>
-            <div class="music-memory">
-                <img id="musicMemoryImage"
-                src="images/memory1.jpg"
-                alt="Memory">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- =====================================================
-     GALLERY PAGE
-===================================================== -->
-<section id="galleryPage"
-        class="sub-page galaxy-page">
-    <button class="back-button">
-        ← Quay lại
-    </button>
-    <div class="page-title galaxy-title">
-        <span>🌌</span>
-        <h1>
-            Thiên hà ký ức
-        </h1>
-        <p>
-            Mỗi ngôi sao là một kỷ niệm của chúng ta.
-        </p>
-    </div>
-    <div class="galaxy">
-        <div class="scattered-stars" aria-hidden="true">
-            <span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span>
-        </div>
-        <div class="planet planet-one" aria-hidden="true"></div>
-        <div class="planet planet-two" aria-hidden="true"></div>
-        <div class="planet planet-three" aria-hidden="true"></div>
-        <div class="shooting-stars" aria-hidden="true">
-            <span class="meteor meteor-1"></span>
-            <span class="meteor meteor-2"></span>
-            <span class="meteor meteor-3"></span>
-            <span class="meteor meteor-4"></span>
-            <span class="meteor meteor-5"></span>
-            <span class="meteor meteor-6"></span>
-            <span class="meteor meteor-7"></span>
-            <span class="meteor meteor-8"></span>
-        </div>
-        <div class="floating-photo photo1"
-            data-image="images/cty.jpg"
-            data-message="Em vẫn nhớ ngày hôm đó. Một ngày rất bình thường nhưng lại trở thành một trong những ký ức đẹp nhất của em.">
-            <img src="images/cty.jpg"
-            alt="Memory 1">
-        </div>
-        <div class="floating-photo photo2"
-            data-image="images/giangsinh.jpg"
-            data-message="Có những khoảnh khắc chỉ cần nhìn lại thôi là em đã mỉm cười.">
-            <img src="images/giangsinh.jpg"
-                alt="Memory 2">
-        </div>
-        <div class="floating-photo photo3"
-            data-image="images/home.jpg"
-            data-message="Cảm ơn anh vì đã luôn ở bên cạnh em trong những ngày vui và cả những ngày không vui.">
-            <img src="images/home.jpg"
-                alt="Memory 3">
-        </div>
-        <div class="floating-photo photo4"
-            data-image="images/noel.jpg"
-            data-message="Nếu có thể lưu giữ một điều mãi mãi, em muốn lưu giữ những ngày tháng có anh.">
-            <img src="images/noel.jpg"
-                alt="Memory 4">
-        </div>
-        <div class="floating-photo photo5"
-            data-image="images/tron.jpg"
-            data-message="Em nhớ này này là ngày anh gãi cu :D.">
-            <img src="images/tron.jpg"
-                alt="Memory 5">
-        </div>
-        <div class="floating-photo photo6"
-            data-image="images/vui.jpg"
-            data-message="Mong rằng sau này chúng ta vẫn sẽ cùng nhau tạo thêm thật nhiều ký ức như thế này. ❤️">
-            <img src="images/vui.jpg"
-            alt="Memory 6">
-        </div>
-        <div class="floating-photo photo7"
-            data-image="images/zoo.jpg"
-            data-message="Thêm một góc nhỏ trong câu chuyện của hai đứa mình. ❤️">
-            <img src="images/zoo.jpg"
-            alt="Memory 7">
-        </div>
-        <div class="floating-photo photo8"
-            data-image="images/zoo1.jpg"
-            data-message="Nhìn lại một chút thôi cũng đủ làm em vui cả ngày. 💗">
-            <img src="images/zoo1.jpg"
-            alt="Memory 8">
-        </div>
-        <div class="floating-photo photo9"
-            data-image="images/vt.jpg"
-            data-message="Tấm này em xấu vãi chóa 💕">
-            <img src="images/vt.jpg"
-            alt="Memory 9">
-        </div>
-        <div class="floating-photo photo10"
-            data-image="images/ôm.jpg"
-            data-message="Và em vẫn muốn chúng ta có thật nhiều tấm ảnh như thế này nữa. 🌌❤️">
-            <img src="images/ôm.jpg"
-            alt="Memory 10">
-        </div>
-        <div class="floating-photo photo11"
-            data-image="images/gian.jpg"
-            data-message="Nếu em biến thành con gián anh có yêu em không?.">
-            <img src="images/gian.jpg"
-            alt="Memory 11">
-        </div>
-        <div class="floating-photo photo12"
-            data-image="images/memory3.jpg"
-            data-message="Những kỷ niệm đẹp luôn tìm được cách ở lại bên mình.">
-            <img src="images/memory3.jpg"
-            alt="Memory 12">
-
-       </div>
-
-       <div class="floating-photo photo13"
-           data-image="images/memory1.jpg"
-           data-message="Thêm một tấm ảnh, thêm một điều đáng nhớ.">
-
-          <img src="images/memory1.jpg"
-              alt="Memory 13">
-
-       </div>
-
-       <div class="floating-photo photo14"
-           data-image="images/memory4.jpg"
-           data-message="Có những ngày bình thường lại trở thành ký ức đặc biệt.">
-
-          <img src="images/memory4.jpg"
-              alt="Memory 14">
-
-       </div>
-
-       <div class="floating-photo photo15"
-           data-image="images/memory2.jpg"
-           data-message="Mỗi góc nhìn đều giữ lại một câu chuyện riêng.">
-
-          <img src="images/memory2.jpg"
-              alt="Memory 15">
-
-       </div>
-
-       <div class="floating-photo photo16"
-           data-image="images/memory5.jpg"
-           data-message="Mong những khoảnh khắc này sẽ còn nối dài mãi.">
-
-          <img src="images/memory5.jpg"
-              alt="Memory 16">
-
-       </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     GALLERY POPUP
-===================================================== -->
-
-<div id="galleryPopup"
-     class="popup-overlay">
-
-    <div class="gallery-popup-box">
-
-        <button id="closeGallery"
-                class="close-popup">
-            ×
-        </button>
-
-        <img id="galleryPopupImage"
-             src=""
-             alt="Memory">
-
-        <div class="gallery-message">
-
-            <span>
-                💌
-            </span>
-
-            <p id="galleryPopupMessage">
-            </p>
-
-        </div>
-
-    </div>
-
+         alt="Pháo hoa chúc mừng"
+         class="fireworks-gif">
 </div>
 
-
 <!-- =====================================================
-     LETTER PAGE
+     3. MAIN APP (THANH MENU BÊN TRÁI + NỘI DUNG CHÍNH)
 ===================================================== -->
+<section id="mainAppScreen" class="screen main-app-screen">
+    <!-- NỀN TRÁI TIM BAY NHẸ -->
+    <div class="floating-hearts-bg" id="floatingHeartsBg" aria-hidden="true"></div>
 
-<section id="letterPage"
-         class="sub-page letter-page">
-
-    <button class="back-button">
-        ← Quay lại
+    <!-- NÚT MỞ MENU TRÊN MOBILE -->
+    <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Mở menu">
+        <span>☰</span>
     </button>
 
-    <div class="letter-title">
+    <!-- BACKDROP CHO MOBILE KHI MỞ MENU -->
+    <div id="sidebarBackdrop" class="sidebar-backdrop"></div>
 
-        <span>💌</span>
-
-        <h1>
-            Một lá thư dành cho anh
-        </h1>
-
-        <p>
-            Có một điều em muốn nói với anh...
-        </p>
-
-    </div>
-
-
-    <div id="envelopeArea"
-         class="envelope-area">
-
-        <div class="envelope">
-
-            <div class="envelope-back"></div>
-
-            <div class="letter-paper">
-
-                <h2>
-                    Dear My Love,
-                </h2>
-
-                <p>
-                    Em không biết phải bắt đầu
-                    từ đâu để nói hết những điều
-                    em muốn nói với anh.
-                </p>
-
-                <p>
-                    Chỉ biết rằng từ khi có anh,
-                    những ngày bình thường của em
-                    cũng trở nên thật đặc biệt.
-                </p>
-
-                <p>
-                    Cảm ơn anh vì đã xuất hiện,
-                    đã yêu thương và ở bên cạnh em.
-                </p>
-
-                <p>
-                    Em hy vọng chúng ta sẽ còn
-                    cùng nhau đi qua thật nhiều
-                    mùa nữa.
-                </p>
-
-                <p class="letter-love">
-                    Yêu anh rất nhiều ❤️
-                </p>
-
+    <!-- THANH MENU BÊN TRÁI (SIDEBAR) -->
+    <aside id="appSidebar" class="app-sidebar">
+        <!-- HEADER SIDEBAR -->
+        <div class="sidebar-header">
+            <div class="sidebar-logo-pulse">
+                <span class="heart-pulse-icon">💖</span>
             </div>
-
-            <div class="envelope-front"></div>
-
-            <div class="envelope-flap"></div>
-
-            <div id="letterHearts" aria-hidden="true">
-                <img src="images/Happy Fun Sticker by Pen Pals.gif"
-                     alt="Trái tim bay ra từ lá thư">
+            <div class="sidebar-title-group">
+                <h1 class="sidebar-brand-title">Anh & Em 💕</h1>
+                <p class="sidebar-brand-subtitle">Our Love Story</p>
             </div>
-
+            <button id="closeSidebarBtn" class="close-sidebar-btn" aria-label="Đóng menu">✕</button>
         </div>
 
-        <p id="envelopeHint">
-            Nhấn vào phong thư ❤️
-        </p>
+        <!-- MENU ITEMS -->
+        <nav class="sidebar-nav">
+            <button class="nav-item active" data-page="homePage">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Trang chủ</span>
+            </button>
+            <button class="nav-item" data-page="loveDayPage">
+                <span class="nav-icon">💕</span>
+                <span class="nav-text">Ngày yêu</span>
+                <span class="nav-badge" id="navDayBadge">...</span>
+            </button>
+            <button class="nav-item" data-page="letterPage">
+                <span class="nav-icon">💌</span>
+                <span class="nav-text">Lời yêu thương</span>
+            </button>
+            <button class="nav-item" data-page="galleryPage">
+                <span class="nav-icon">🌌</span>
+                <span class="nav-text">Thiên hà ký ức</span>
+            </button>
+            <button class="nav-item" data-page="photoAlbumPage">
+                <span class="nav-icon">📸</span>
+                <span class="nav-text">Hình ảnh của chúng mình</span>
+            </button>
+            <button class="nav-item" data-page="musicPage">
+                <span class="nav-icon">🎵</span>
+                <span class="nav-text">Âm nhạc</span>
+            </button>
+            <button class="nav-item" data-page="giftPage">
+                <span class="nav-icon">🎁</span>
+                <span class="nav-text">Quà tặng</span>
+            </button>
+            <button class="nav-item" data-page="lovePointPage">
+                <span class="nav-icon">⭐</span>
+                <span class="nav-text">Điểm tình yêu</span>
+                <span class="nav-badge point-badge" id="navPointBadge">...</span>
+            </button>
+            <button class="nav-item" data-page="storagePage">
+                <span class="nav-icon">💾</span>
+                <span class="nav-text">Dữ liệu / Lưu trữ</span>
+            </button>
+        </nav>
 
-    </div>
+        <!-- FOOTER SIDEBAR -->
+        <div class="sidebar-footer">
+            <div class="sidebar-point-card">
+                <span class="point-label">❤️ Điểm tình yêu</span>
+                <strong class="point-value" id="sidebarLovePoints">1250</strong>
+            </div>
+            <div class="sidebar-autosave-status" id="sidebarAutoSaveStatus">
+                <span class="autosave-dot"></span>
+                <span class="autosave-text" id="autoSaveText">💾 Đã tự động lưu</span>
+            </div>
+        </div>
+    </aside>
 
+    <!-- KHU VỰC NỘI DUNG CHÍNH (BÊN PHẢI) -->
+    <main class="main-content" id="mainContent">
+
+        <!-- ==============================================
+             TRANG 1: TRANG CHỦ
+        ============================================== -->
+        <section id="homePage" class="app-page active">
+            <div class="page-container home-page-container">
+                <!-- HERO CARD -->
+                <div class="hero-love-banner">
+                    <div class="hero-hearts-decor">✨ 💕 ✨</div>
+                    <h2 class="hero-title">Chào mừng anh đến với thế giới của chúng mình!</h2>
+                    <p class="hero-subtitle">Nơi lưu giữ từng khoảnh khắc ngọt ngào và những kỷ niệm không thể quên ❤️</p>
+                    
+                    <!-- THỐNG KÊ NHANH -->
+                    <div class="quick-stats-row">
+                        <div class="quick-stat-card" data-jump="loveDayPage">
+                            <span class="stat-icon">💕</span>
+                            <div class="stat-info">
+                                <span class="stat-label">Chúng mình đã yêu</span>
+                                <strong class="stat-number" id="quickDaysCount">365 ngày</strong>
+                            </div>
+                        </div>
+                        <div class="quick-stat-card" data-jump="lovePointPage">
+                            <span class="stat-icon">⭐</span>
+                            <div class="stat-info">
+                                <span class="stat-label">Điểm tình yêu</span>
+                                <strong class="stat-number" id="quickPointsCount">1250</strong>
+                            </div>
+                        </div>
+                        <div class="quick-stat-card" data-jump="galleryPage">
+                            <span class="stat-icon">🌌</span>
+                            <div class="stat-info">
+                                <span class="stat-label">Thiên hà ký ức</span>
+                                <strong class="stat-number">16 vì sao ✨</strong>
+                            </div>
+                        </div>
+                        <div class="quick-stat-card" data-jump="photoAlbumPage">
+                            <span class="stat-icon">📸</span>
+                            <div class="stat-info">
+                                <span class="stat-label">Album của chúng mình</span>
+                                <strong class="stat-number" id="quickPhotosCount">0 ảnh</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Ô CHỨC NĂNG NHANH -->
+                <div class="section-heading">
+                    <h3>Khám phá các góc kỷ niệm 🎁</h3>
+                    <p>Anh muốn mở món quà nào trước?</p>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- MUSIC -->
+                    <div class="menu-card" data-jump="musicPage">
+                        <div class="card-icon">🎵</div>
+                        <h2>Âm nhạc</h2>
+                        <p>Những bài hát kể câu chuyện của chúng ta.</p>
+                        <span class="card-btn">Mở ra →</span>
+                    </div>
+
+                    <!-- IMAGE -->
+                    <div class="menu-card" data-jump="galleryPage">
+                        <div class="card-icon">🌌</div>
+                        <h2>Thiên hà ký ức</h2>
+                        <p>Những khoảnh khắc em muốn giữ mãi.</p>
+                        <span class="card-btn">Mở ra →</span>
+                    </div>
+
+                    <!-- LETTER -->
+                    <div class="menu-card" data-jump="letterPage">
+                        <div class="card-icon">💌</div>
+                        <h2>Lá thư</h2>
+                        <p>Điều em chưa từng nói hết với anh.</p>
+                        <span class="card-btn">Mở ra →</span>
+                    </div>
+
+                    <!-- GIFT -->
+                    <div class="menu-card" data-jump="giftPage">
+                        <div class="card-icon">🎁</div>
+                        <h2>Quà tặng</h2>
+                        <p>Món quà cuối cùng đang chờ anh.</p>
+                        <span class="card-btn">Mở ra →</span>
+                    </div>
+                </div>
+
+                <!-- LỜI NHẮN NGỌT NGÀO -->
+                <div class="home-quote-box">
+                    <span class="quote-icon">🌸</span>
+                    <p class="quote-text" id="randomQuoteText">
+                        "Có những ngày bình thường nhưng lại trở nên thật đặc biệt, chỉ vì ngày hôm đó có anh bên cạnh."
+                    </p>
+                    <span class="quote-author">~ Gửi anh yêu ~</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             TRANG 2: NGÀY YÊU (BỘ ĐẾM THỜI GIAN THỰC)
+        ============================================== -->
+        <section id="loveDayPage" class="app-page">
+            <div class="page-container">
+                <div class="page-header">
+                    <span class="page-header-icon">💕</span>
+                    <h1>Chúng mình đã yêu nhau được...</h1>
+                    <p>Từng giây từng phút bên anh đều là vô giá</p>
+                </div>
+
+                <!-- KHUNG ĐỒNG HỒ TÌNH YÊU CHÍNH -->
+                <div class="love-counter-board">
+                    <div class="counter-heart-badge">
+                        <span class="pulsing-heart">❤️</span>
+                    </div>
+                    
+                    <div class="big-day-display">
+                        <span class="big-day-label">Chúng mình đã bên nhau</span>
+                        <div class="big-day-number-wrapper">
+                            <span class="big-day-number" id="liveDayTotal">0</span>
+                            <span class="big-day-unit">NGÀY</span>
+                        </div>
+                        <div class="detailed-date-breakdown" id="liveDateBreakdown">
+                            0 năm 0 tháng 0 ngày
+                        </div>
+                    </div>
+
+                    <!-- THỜI GIAN CHI TIẾT THỰC (GIỜ : PHÚT : GIÂY) -->
+                    <div class="realtime-clock-grid">
+                        <div class="clock-unit-card">
+                            <span class="clock-val" id="liveHours">00</span>
+                            <span class="clock-lbl">Giờ</span>
+                        </div>
+                        <span class="clock-colon">:</span>
+                        <div class="clock-unit-card">
+                            <span class="clock-val" id="liveMinutes">00</span>
+                            <span class="clock-lbl">Phút</span>
+                        </div>
+                        <span class="clock-colon">:</span>
+                        <div class="clock-unit-card">
+                            <span class="clock-val" id="liveSeconds">00</span>
+                            <span class="clock-lbl">Giây</span>
+                        </div>
+                    </div>
+
+                    <!-- THIẾT LẬP NGÀY BẮT ĐẦU YÊU -->
+                    <div class="start-date-setting-box">
+                        <label for="loveStartDateInput">
+                            <span>📅 Ngày bắt đầu yêu:</span>
+                        </label>
+                        <div class="input-with-save">
+                            <input type="date" id="loveStartDateInput" class="love-date-input">
+                            <button id="saveStartDateBtn" class="sub-btn">
+                                Cập nhật 💖
+                            </button>
+                        </div>
+                        <small class="setting-hint">Dữ liệu được tự động lưu lại vào hệ thống</small>
+                    </div>
+                </div>
+
+                <!-- CÁC MỐC KỶ NIỆM TÌNH YÊU -->
+                <div class="milestones-section">
+                    <h3>🏆 Cột mốc kỷ niệm đáng nhớ</h3>
+                    <div class="milestones-grid" id="milestonesGrid">
+                        <!-- Render động qua JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             TRANG 3: LỜI YÊU THƯƠNG
+        ============================================== -->
+        <section id="letterPage" class="app-page letter-page">
+            <div class="page-container">
+                <div class="page-header">
+                    <span class="page-header-icon">💌</span>
+                    <h1>Một lá thư dành cho anh</h1>
+                    <p>Có một điều em muốn nói với anh...</p>
+                </div>
+
+                <!-- PHONG THƯ TƯƠNG TÁC GỐC -->
+                <div id="envelopeArea" class="envelope-area">
+                    <div class="envelope">
+                        <div class="envelope-back"></div>
+                        <div class="letter-paper">
+                            <h2>Dear My Love,</h2>
+                            <p>Em không biết phải bắt đầu từ đâu để nói hết những điều em muốn nói với anh.</p>
+                            <p>Chỉ biết rằng từ khi có anh, những ngày bình thường của em cũng trở nên thật đặc biệt.</p>
+                            <p>Cảm ơn anh vì đã xuất hiện, đã yêu thương và ở bên cạnh em.</p>
+                            <p>Em hy vọng chúng ta sẽ còn cùng nhau đi qua thật nhiều mùa nữa.</p>
+                            <p class="letter-love">Yêu anh rất nhiều ❤️</p>
+                        </div>
+                        <div class="envelope-front"></div>
+                        <div class="envelope-flap"></div>
+                        <div id="letterHearts" aria-hidden="true">
+                            <img src="images/Happy Fun Sticker by Pen Pals.gif" alt="Trái tim bay ra từ lá thư">
+                        </div>
+                    </div>
+                    <p id="envelopeHint">Nhấn vào phong thư ❤️</p>
+                </div>
+
+                <!-- KHU VỰC VIẾT THÊM LỜI NHẮN YÊU THƯƠNG -->
+                <div class="custom-notes-section">
+                    <div class="section-heading">
+                        <h3>Hòm thư yêu thương của hai đứa mình 📮</h3>
+                        <p>Lưu lại những lời nhắn ngọt ngào mỗi ngày</p>
+                    </div>
+
+                    <div class="add-note-card">
+                        <textarea id="newLoveNoteInput" 
+                                  placeholder="Nhập lời yêu thương gửi tới anh/em hôm nay..." 
+                                  rows="3"></textarea>
+                        <div class="add-note-action">
+                            <select id="noteAuthorSelect" class="sub-select">
+                                <option value="Em gửi Anh">🌸 Em gửi Anh</option>
+                                <option value="Anh gửi Em">💙 Anh gửi Em</option>
+                            </select>
+                            <button id="sendLoveNoteBtn" class="main-button small-btn">
+                                Gửi lời nhắn 💌
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="love-notes-list" id="loveNotesList">
+                        <!-- Danh sách lời nhắn hiển thị ở đây -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             TRANG 4: THIÊN HÀ KÝ ỨC (NGUYÊN BẢN 100%)
+        ============================================== -->
+        <section id="galleryPage" class="app-page galaxy-page">
+            <div class="page-title galaxy-title">
+                <span>🌌</span>
+                <h1>Thiên hà ký ức</h1>
+                <p>Mỗi ngôi sao là một kỷ niệm của chúng ta.</p>
+            </div>
+            <div class="galaxy">
+                <div class="scattered-stars" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="planet planet-one" aria-hidden="true"></div>
+                <div class="planet planet-two" aria-hidden="true"></div>
+                <div class="planet planet-three" aria-hidden="true"></div>
+                <div class="shooting-stars" aria-hidden="true">
+                    <span class="meteor meteor-1"></span>
+                    <span class="meteor meteor-2"></span>
+                    <span class="meteor meteor-3"></span>
+                    <span class="meteor meteor-4"></span>
+                    <span class="meteor meteor-5"></span>
+                    <span class="meteor meteor-6"></span>
+                    <span class="meteor meteor-7"></span>
+                    <span class="meteor meteor-8"></span>
+                </div>
+                <div class="floating-photo photo1" data-image="images/cty.jpg" data-message="Em vẫn nhớ ngày hôm đó. Một ngày rất bình thường nhưng lại trở thành một trong những ký ức đẹp nhất của em.">
+                    <img src="images/cty.jpg" alt="Memory 1">
+                </div>
+                <div class="floating-photo photo2" data-image="images/giangsinh.jpg" data-message="Có những khoảnh khắc chỉ cần nhìn lại thôi là em đã mỉm cười.">
+                    <img src="images/giangsinh.jpg" alt="Memory 2">
+                </div>
+                <div class="floating-photo photo3" data-image="images/home.jpg" data-message="Cảm ơn anh vì đã luôn ở bên cạnh em trong những ngày vui và cả những ngày không vui.">
+                    <img src="images/home.jpg" alt="Memory 3">
+                </div>
+                <div class="floating-photo photo4" data-image="images/noel.jpg" data-message="Nếu có thể lưu giữ một điều mãi mãi, em muốn lưu giữ những ngày tháng có anh.">
+                    <img src="images/noel.jpg" alt="Memory 4">
+                </div>
+                <div class="floating-photo photo5" data-image="images/tron.jpg" data-message="Em nhớ này này là ngày anh gãi cu :D.">
+                    <img src="images/tron.jpg" alt="Memory 5">
+                </div>
+                <div class="floating-photo photo6" data-image="images/vui.jpg" data-message="Mong rằng sau này chúng ta vẫn sẽ cùng nhau tạo thêm thật nhiều ký ức như thế này. ❤️">
+                    <img src="images/vui.jpg" alt="Memory 6">
+                </div>
+                <div class="floating-photo photo7" data-image="images/zoo.jpg" data-message="Thêm một góc nhỏ trong câu chuyện của hai đứa mình. ❤️">
+                    <img src="images/zoo.jpg" alt="Memory 7">
+                </div>
+                <div class="floating-photo photo8" data-image="images/zoo1.jpg" data-message="Nhìn lại một chút thôi cũng đủ làm em vui cả ngày. 💗">
+                    <img src="images/zoo1.jpg" alt="Memory 8">
+                </div>
+                <div class="floating-photo photo9" data-image="images/vt.jpg" data-message="Tấm này em xấu vãi chóa 💕">
+                    <img src="images/vt.jpg" alt="Memory 9">
+                </div>
+                <div class="floating-photo photo10" data-image="images/ôm.jpg" data-message="Và em vẫn muốn chúng ta có thật nhiều tấm ảnh như thế này nữa. 🌌❤️">
+                    <img src="images/ôm.jpg" alt="Memory 10">
+                </div>
+                <div class="floating-photo photo11" data-image="images/gian.jpg" data-message="Nếu em biến thành con gián anh có yêu em không?.">
+                    <img src="images/gian.jpg" alt="Memory 11">
+                </div>
+                <div class="floating-photo photo12" data-image="images/memory3.jpg" data-message="Những kỷ niệm đẹp luôn tìm được cách ở lại bên mình.">
+                    <img src="images/memory3.jpg" alt="Memory 12">
+                </div>
+                <div class="floating-photo photo13" data-image="images/memory1.jpg" data-message="Thêm một tấm ảnh, thêm một điều đáng nhớ.">
+                    <img src="images/memory1.jpg" alt="Memory 13">
+                </div>
+                <div class="floating-photo photo14" data-image="images/memory4.jpg" data-message="Có những ngày bình thường lại trở thành ký ức đặc biệt.">
+                    <img src="images/memory4.jpg" alt="Memory 14">
+                </div>
+                <div class="floating-photo photo15" data-image="images/memory2.jpg" data-message="Mỗi góc nhìn đều giữ lại một câu chuyện riêng.">
+                    <img src="images/memory2.jpg" alt="Memory 15">
+                </div>
+                <div class="floating-photo photo16" data-image="images/memory5.jpg" data-message="Mong những khoảnh khắc này sẽ còn nối dài mãi.">
+                    <img src="images/memory5.jpg" alt="Memory 16">
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             TRANG 4.2: HÌNH ẢNH CỦA CHÚNG MÌNH (ALBUM POLAROID / SCRAPBOOK ĐĂNG ẢNH MỚI)
+        ============================================== -->
+        <section id="photoAlbumPage" class="app-page">
+            <div class="page-container">
+                <div class="page-header">
+                    <span class="page-header-icon">📸</span>
+                    <h1>Hình ảnh của chúng mình</h1>
+                    <p>Mỗi bức hình là một khoảnh khắc thanh xuân tươi đẹp</p>
+                </div>
+
+                <div class="gallery-action-bar">
+                    <button id="openUploadModalBtn" class="main-button upload-photo-btn">
+                        📸 Đăng hình ảnh mới
+                    </button>
+                    <span class="gallery-count-badge" id="galleryCountBadge">0 bức ảnh</span>
+                </div>
+
+                <!-- LƯỚI KHUNG ẢNH POLAROID / SCRAPBOOK -->
+                <div class="polaroid-grid" id="polaroidGrid">
+                    <!-- Khung ảnh sẽ được sinh ra ở đây -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             TRANG 5: ÂM NHẠC
+        ============================================== -->
+        <section id="musicPage" class="app-page">
+            <div class="page-container">
+                <div class="page-header">
+                    <span class="page-header-icon">🎵</span>
+                    <h1>Những bài hát của gửi</h1>
+                    <p>Mỗi bài hát là một chút ký ức.</p>
+                </div>
+
+                <div class="music-layout">
+                    <!-- PLAYER -->
+                    <div class="music-player">
+                        <div id="record" class="record">
+                            <div class="record-center">❤</div>
+                        </div>
+                        <div class="track-meta">
+                            <h2 id="songTitle">Perfect</h2>
+                            <p id="songArtist">Ed Sheeran</p>
+                        </div>
+                        <div class="progress-container">
+                            <span id="currentTime">0:00</span>
+                            <input type="range" id="progressBar" value="0" min="0" max="100">
+                            <span id="duration">0:00</span>
+                        </div>
+                        <div class="music-controls">
+                            <button id="prevButton" aria-label="Bài trước">⏮</button>
+                            <button id="playButton" class="play-button" aria-label="Phát nhạc">▶</button>
+                            <button id="nextButton" aria-label="Bài sau">⏭</button>
+                        </div>
+                        <div class="playlist" id="playlist"></div>
+                        <audio id="audioPlayer"></audio>
+                    </div>
+
+                    <!-- LYRICS -->
+                    <div class="lyrics-area">
+                        <h2>🎤 Lời nhắn dành cho anh</h2>
+                        <div id="lyrics" class="lyrics">
+                            <p class="active-line">Có những ngày bình thường nhưng lại trở nên đặc biệt.</p>
+                            <p>Chỉ vì ngày hôm đó em có anh bên cạnh.</p>
+                            <p>Và em mong rằng chúng ta sẽ còn thật nhiều ngày như thế nữa.</p>
+                        </div>
+                        <div class="music-memory">
+                            <img id="musicMemoryImage" src="images/memory1.jpg" alt="Memory">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             TRANG 6: QUÀ TẶNG
+        ============================================== -->
+        <section id="giftPage" class="app-page gift-page">
+            <div class="page-container">
+                <div class="page-header">
+                    <span class="page-header-icon">🎁</span>
+                    <h1>Món quà cuối cùng</h1>
+                    <p>Anh đã sẵn sàng chưa?</p>
+                </div>
+
+                <!-- HỘP QUÀ -->
+                <div id="giftBoxArea" class="gift-box-area">
+                    <div class="gift-box" aria-label="Hộp quà">
+                        <canvas id="giftGifStill" width="480" height="480" aria-hidden="true"></canvas>
+                        <img id="giftGif" src="images/Merry Christmas Gift Sticker by sanne.gif" alt="Hộp quà màu trắng" class="gift-box-gif">
+                        <img id="giftOpenStill" src="images/gift-box-final.png" alt="Hộp quà màu trắng đang mở" class="gift-open-still">
+                    </div>
+                </div>
+
+                <!-- QUÀ BÊN TRONG -->
+                <div id="giftContents" class="gift-contents">
+                    <img src="images/Flowers Wedding Sticker by David's Bridal.gif" class="gift-item flower-gift" alt="Flower">
+                    <div class="chocolate-container">
+                        <img src="images/Sticker by YEAH YEAH CHLOE.gif" id="chocolateGif" class="gift-item" alt="Chocolate">
+                        <p>Nhấn vào em 🍫</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             TRANG 7: ĐIỂM TÌNH YÊU (LOVE POINTS)
+        ============================================== -->
+        <section id="lovePointPage" class="app-page">
+            <div class="page-container">
+                <div class="page-header">
+                    <span class="page-header-icon">⭐</span>
+                    <h1>Hệ thống Điểm tình yêu</h1>
+                    <p>Trò chơi nhỏ tích lũy yêu thương giữa hai chúng mình</p>
+                </div>
+
+                <!-- KHUNG ĐIỂM TỔNG QUAN -->
+                <div class="love-points-hero-card">
+                    <div class="point-badge-big">
+                        <span class="point-heart-icon">❤️</span>
+                        <div class="point-score-group">
+                            <span class="point-score-label">Điểm tình yêu hiện tại</span>
+                            <span class="point-score-number" id="mainLovePointsVal">1250</span>
+                        </div>
+                    </div>
+
+                    <div class="love-rank-display">
+                        <span class="rank-tag" id="loveRankTag">👑 Tình Yêu Vĩnh Cửu</span>
+                        <p class="rank-desc" id="loveRankDesc">Chúng mình sinh ra là để dành cho nhau!</p>
+                    </div>
+
+                    <!-- KHU VỰC CỘNG / TRỪ ĐIỂM -->
+                    <div class="point-action-buttons-box">
+                        <div class="point-btn-group positive-group">
+                            <span class="btn-group-title">➕ Thưởng Điểm Ngoan</span>
+                            <div class="point-buttons-row">
+                                <button class="btn-point btn-plus" data-points="10">+10</button>
+                                <button class="btn-point btn-plus" data-points="50">+50</button>
+                                <button class="btn-point btn-plus" data-points="100">+100</button>
+                            </div>
+                        </div>
+
+                        <div class="point-btn-group negative-group">
+                            <span class="btn-group-title">➖ Phạt Điểm Hư</span>
+                            <div class="point-buttons-row">
+                                <button class="btn-point btn-minus" data-points="-10">-10</button>
+                                <button class="btn-point btn-minus" data-points="-50">-50</button>
+                                <button class="btn-point btn-minus" data-points="-100">-100</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FORM TÙY CHỌN LÝ DO CỘNG / TRỪ -->
+                    <div class="custom-point-reason-box">
+                        <input type="text" id="pointReasonInput" placeholder="Nhập lý do (ví dụ: Mua trà sữa cho em, dỗi vô cớ...)" class="reason-input">
+                        <div class="custom-point-btns">
+                            <button id="customAddPointBtn" class="main-button small-btn">+ Cộng điểm</button>
+                            <button id="customMinusPointBtn" class="sub-btn small-btn">- Trừ điểm</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LỊCH SỬ BIẾN ĐỘNG ĐIỂM -->
+                <div class="point-history-section">
+                    <h3>📜 Nhật ký tình yêu gần đây</h3>
+                    <div class="point-history-list" id="pointHistoryList">
+                        <!-- Render động qua JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             TRANG 8: DỮ LIỆU & LƯU TRỮ (AUTO SAVE)
+        ============================================== -->
+        <section id="storagePage" class="app-page">
+            <div class="page-container">
+                <div class="page-header">
+                    <span class="page-header-icon">💾</span>
+                    <h1>Dữ liệu & Tự động lưu</h1>
+                    <p>Mọi khoảnh khắc của hai bạn luôn được bảo vệ an toàn</p>
+                </div>
+
+                <!-- TRẠNG THÁI AUTO-SAVE -->
+                <div class="autosave-detail-card">
+                    <div class="autosave-badge-icon">💾</div>
+                    <div class="autosave-detail-text">
+                        <h3>Chế độ Auto Save: <span class="status-active">Đang kích hoạt</span></h3>
+                        <p id="storageLastSavedTime">Đã tự động lưu vào bộ nhớ trình duyệt.</p>
+                    </div>
+                </div>
+
+                <!-- TỔNG KẾT DỮ LIỆU -->
+                <div class="storage-summary-grid">
+                    <div class="storage-stat-item">
+                        <span class="stat-ico">📅</span>
+                        <div>
+                            <strong>Ngày bắt đầu</strong>
+                            <p id="storageDateDisplay">Chưa thiết lập</p>
+                        </div>
+                    </div>
+                    <div class="storage-stat-item">
+                        <span class="stat-ico">⭐</span>
+                        <div>
+                            <strong>Điểm tình yêu</strong>
+                            <p id="storagePointsDisplay">1250 điểm</p>
+                        </div>
+                    </div>
+                    <div class="storage-stat-item">
+                        <span class="stat-ico">📸</span>
+                        <div>
+                            <strong>Hình ảnh đã lưu</strong>
+                            <p id="storagePhotosDisplay">0 ảnh</p>
+                        </div>
+                    </div>
+                    <div class="storage-stat-item">
+                        <span class="stat-ico">💌</span>
+                        <div>
+                            <strong>Lời yêu thương</strong>
+                            <p id="storageNotesDisplay">0 lời nhắn</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CÁC THAO TÁC SAO LƯU -->
+                <div class="backup-actions-box">
+                    <h3>📦 Quản lý dữ liệu sao lưu</h3>
+                    <p>Anh/em có thể tải dữ liệu về máy để chuyển sang điện thoại hoặc máy tính khác bất cứ lúc nào!</p>
+                    <div class="backup-btns-row">
+                        <button id="exportDataBtn" class="main-button small-btn">
+                            📥 Tải file sao lưu (JSON)
+                        </button>
+                        <label class="file-upload-label sub-btn small-btn">
+                            📤 Nhập dữ liệu sao lưu
+                            <input type="file" id="importDataInput" accept=".json" style="display:none;">
+                        </label>
+                        <button id="resetDataBtn" class="danger-btn small-btn">
+                            🔄 Đặt lại mặc định
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 </section>
 
-
 <!-- =====================================================
-     GIFT PAGE
+     MODAL: ĐĂNG HÌNH ẢNH MỚI (POLAROID)
 ===================================================== -->
-
-<section id="giftPage"
-         class="sub-page gift-page">
-
-    <button class="back-button">
-        ← Quay lại
-    </button>
-
-    <div class="page-title">
-
-        <span>🎁</span>
-
-        <h1>
-            Món quà cuối cùng
-        </h1>
-
-        <p>
-            Anh đã sẵn sàng chưa?
-        </p>
-
-    </div>
-
-
-    <!-- HỘP QUÀ -->
-    <div id="giftBoxArea"
-         class="gift-box-area">
-
-        <div class="gift-box" aria-label="Hộp quà">
-            <canvas id="giftGifStill"
-                    width="480"
-                    height="480"
-                    aria-hidden="true"></canvas>
-            <img id="giftGif"
-                 src="images/Merry Christmas Gift Sticker by sanne.gif"
-                 alt="Hộp quà màu trắng"
-                 class="gift-box-gif">
-              <img id="giftOpenStill"
-                  src="images/gift-box-final.png"
-                  alt="Hộp quà màu trắng đang mở"
-                  class="gift-open-still">
-        </div>
-    </div>
-
-
-    <!-- QUÀ BÊN TRONG -->
-    <div id="giftContents"
-         class="gift-contents">
-
-        <img src="images/Flowers Wedding Sticker by David's Bridal.gif"
-             class="gift-item flower-gift"
-             alt="Flower">
-
-        <div class="chocolate-container">
-
-            <img src="images/Sticker by YEAH YEAH CHLOE.gif"
-                 id="chocolateGif"
-                 class="gift-item"
-                 alt="Chocolate">
-
-            <p>
-                Nhấn vào em 🍫
-            </p>
-
+<div id="uploadPhotoModal" class="popup-overlay">
+    <div class="popup-box upload-popup-box">
+        <button id="closeUploadModalBtn" class="close-popup">×</button>
+        <div class="upload-modal-header">
+            <span class="upload-icon">📸</span>
+            <h2>Đăng hình ảnh mới</h2>
+            <p>Chọn một khoảnh khắc thật đẹp của chúng mình nhé ❤️</p>
         </div>
 
+        <div class="upload-form">
+            <!-- KHU VỰC CHỌN ẢNH VÀ PREVIEW -->
+            <div class="photo-dropzone" id="photoDropzone">
+                <input type="file" id="photoFileInput" accept="image/*" class="file-input-hidden">
+                <div id="dropzoneEmpty" class="dropzone-empty">
+                    <span class="dropzone-icon">📁</span>
+                    <p>Nhấp vào đây để chọn ảnh từ máy</p>
+                    <small>Hỗ trợ JPG, PNG, GIF, WebP</small>
+                </div>
+                <div id="dropzonePreview" class="dropzone-preview" style="display:none;">
+                    <img id="previewImage" src="" alt="Preview">
+                    <button type="button" id="removePreviewBtn" class="remove-preview-btn">✕ Chọn ảnh khác</button>
+                </div>
+            </div>
+
+            <!-- CHÚ THÍCH ẢNH -->
+            <div class="form-group">
+                <label for="photoCaptionInput">❤️ Chú thích kỷ niệm:</label>
+                <input type="text" id="photoCaptionInput" placeholder="Ví dụ: Ngày đầu tiên đi chơi cùng nhau..." class="reason-input">
+            </div>
+
+            <!-- NGÀY CHỤP -->
+            <div class="form-group">
+                <label for="photoDateInput">📅 Ngày kỷ niệm:</label>
+                <input type="date" id="photoDateInput" class="love-date-input">
+            </div>
+
+            <!-- NÚT XÁC NHẬN ĐĂNG -->
+            <div class="upload-actions">
+                <button id="confirmUploadBtn" class="main-button">
+                    Đăng ảnh vào Album ❤️
+                </button>
+            </div>
+        </div>
     </div>
-
-</section>
-
+</div>
 
 <!-- =====================================================
-     CHOCOLATE LETTER
+     LIGHTBOX: XEM ẢNH LỚN
 ===================================================== -->
+<div id="galleryPopup" class="popup-overlay lightbox-overlay">
+    <div class="gallery-popup-box lightbox-box">
+        <button id="closeGallery" class="close-popup" aria-label="Đóng">×</button>
+        
+        <!-- NÚT ĐIỀU HƯỚNG PREV / NEXT -->
+        <button id="lightboxPrevBtn" class="lightbox-nav-btn prev-btn" aria-label="Ảnh trước">‹</button>
+        <button id="lightboxNextBtn" class="lightbox-nav-btn next-btn" aria-label="Ảnh sau">›</button>
 
-<div id="chocolatePopup"
-     class="popup-overlay">
+        <div class="lightbox-image-wrap">
+            <img id="galleryPopupImage" src="" alt="Memory">
+        </div>
 
+        <div class="gallery-message lightbox-caption-wrap">
+            <span>💌</span>
+            <p id="galleryPopupMessage"></p>
+            <small id="galleryPopupDate" class="lightbox-date"></small>
+        </div>
+    </div>
+</div>
+
+<!-- =====================================================
+     CHOCOLATE POPUP & LỜI CẦU HÔN
+===================================================== -->
+<div id="chocolatePopup" class="popup-overlay">
     <div class="chocolate-letter">
-
-        <button id="closeChocolate"
-                class="close-popup">
-            ×
-        </button>
-
-        <h2>
-            🍫 Một chút ngọt ngào dành cho anh
-        </h2>
-
-        <p>
-            Anh có biết vì sao em tặng anh
-            chocolate không?
-        </p>
-
-        <p>
-            Vì em muốn những ngày bên anh
-            lúc nào cũng ngọt ngào như thế này.
-        </p>
-
-        <p>
-            Và còn một điều nữa...
-        </p>
-
-        <p>
-            Điều quan trọng nhất em muốn hỏi anh.
-        </p>
-
+        <button id="closeChocolate" class="close-popup">×</button>
+        <h2>🍫 Một chút ngọt ngào dành cho anh</h2>
+        <p>Anh có biết vì sao em tặng anh chocolate không?</p>
+        <p>Vì em muốn những ngày bên anh lúc nào cũng ngọt ngào như thế này.</p>
+        <p>Và còn một điều nữa...</p>
+        <p>Điều quan trọng nhất em muốn hỏi anh.</p>
         <p class="letter-note handwritten">
             Từ lúc gặp anh, em đã biết
             <br>
@@ -768,121 +885,66 @@
             <br>
             rất đẹp và rất ngọt ngào.
         </p>
-
         <div class="ring-area">
-
-            <img src="images/Pink Propose Sticker by Franck.gif"
-                 alt="Ring gif">
-
+            <img src="images/Pink Propose Sticker by Franck.gif" alt="Ring gif">
         </div>
-
         <h1>
             Anh có đồng ý
             <br>
             làm chồng em không?
         </h1>
-
-
         <div class="proposal-buttons">
-
-            <button id="yesButton"
-                    class="yes-button">
-
-                CÓ ❤️
-
-            </button>
-
-            <button id="noButton"
-                    class="no-button">
-
-                KHÔNG 😭
-
-            </button>
-
+            <button id="yesButton" class="yes-button">CÓ ❤️</button>
+            <button id="noButton" class="no-button">KHÔNG 😭</button>
         </div>
-
-        <p id="noMessage"
-           class="no-message">
-        </p>
-
+        <p id="noMessage" class="no-message"></p>
     </div>
-
 </div>
-
 
 <!-- =====================================================
      FINAL POPUP
 ===================================================== -->
-
-<div id="finalPopup"
-    class="popup-overlay">
+<div id="finalPopup" class="popup-overlay">
     <div class="popup-box final-popup">
-        <img src="images/Cat Love Sticker.gif"
-            alt="Happy"
-            class="final-gif">
+        <img src="images/Cat Love Sticker.gif" alt="Happy" class="final-gif">
         <div class="final-title-row">
-            <h1>
-                Em biết anh sẽ chịu mà!
-            </h1>
-
-        <p>
-            Vậy từ hôm nay...
-        </p>
-
-        <p>
-            Anh chính thức thuộc về em rồi nhé! 🥰
-        </p>
-        <button id="closeFinal"
-                class="main-button">
-
-            YÊU EM MÃI NHÉ ❤️
-
-        </button>
-
+            <h1>Em biết anh sẽ chịu mà!</h1>
+            <p>Vậy từ hôm nay...</p>
+            <p>Anh chính thức thuộc về em rồi nhé! 🥰</p>
+            <button id="closeFinal" class="main-button">
+                YÊU EM MÃI NHÉ ❤️
+            </button>
+        </div>
     </div>
-
 </div>
 
-
 <!-- =====================================================
-     ENDING
+     ENDING SCREEN
 ===================================================== -->
-
-<section id="endingScreen"
-         class="screen ending-screen">
-
+<section id="endingScreen" class="screen ending-screen">
     <div class="ending-content">
-
-        <h1>
-            OUR LOVE STORY
-        </h1>
-
-        <h2>
-            Anh + Em
-        </h2>
-
-        <div class="infinity">
-            ∞
-        </div>
-
+        <h1>OUR LOVE STORY</h1>
+        <h2>Anh + Em</h2>
+        <div class="infinity">∞</div>
         <p>
             Cảm ơn anh vì đã xuất hiện
             <br>
             trong cuộc đời em.
         </p>
-
         <p>
             Mong rằng câu chuyện của chúng ta
             <br>
             sẽ còn rất rất dài... ❤️
         </p>
-
+        <button id="returnToHomeBtn" class="main-button return-btn">
+            🏠 Quay lại Trang chủ
+        </button>
     </div>
-
 </section>
 
+<!-- FLOATING FEEDBACK TOAST / POPPING HEARTS -->
+<div id="floatingToastContainer" class="floating-toast-container"></div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
