@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Love Story ❤️</title>
     <link rel="stylesheet" href="style.css">
+    <!-- MQTT Client CDN cho đồng bộ Realtime giữa 2 thiết bị -->
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 </head>
 
 <body>
@@ -436,6 +438,36 @@
         </section>
 
         <!-- ==============================================
+             TRANG 2.5: HOẠT ĐỘNG CHUNG CỦA CHÚNG MÌNH (MỤC 12.4)
+        ============================================== -->
+        <section id="activityPage" class="app-page">
+            <div class="page-container">
+                <div class="page-header">
+                    <span class="page-header-icon">📜</span>
+                    <h1>Hoạt động của chúng mình</h1>
+                    <p>Nhật ký ghi lại từng tương tác và khoảnh khắc của cả hai đứa ❤️</p>
+                </div>
+
+                <div class="activity-top-bar">
+                    <div class="activity-online-pill" id="partnerPresencePill">
+                        <span class="status-indicator-dot online"></span>
+                        <span id="activityOnlineText">Đồng bộ trực tuyến đang kết nối</span>
+                    </div>
+                    <div class="activity-filter-actions">
+                        <button id="clearActivityHistoryBtn" class="sub-btn small-btn" title="Xóa lịch sử cũ">Dọn dẹp</button>
+                    </div>
+                </div>
+
+                <!-- TIMELINE HOẠT ĐỘNG CHUNG -->
+                <div class="activity-timeline-card">
+                    <div class="activity-timeline" id="activityTimelineList">
+                        <!-- Render từ JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
              TRANG 3: LỜI YÊU THƯƠNG
         ============================================== -->
         <section id="letterPage" class="app-page letter-page">
@@ -608,6 +640,31 @@
         </section>
 
         <!-- ==============================================
+             TRANG 4.3: KỶ NIỆM CỦA CHÚNG MÌNH (MỤC 12.11)
+        ============================================== -->
+        <section id="memoriesPage" class="app-page">
+            <div class="page-container">
+                <div class="page-header">
+                    <span class="page-header-icon">📖</span>
+                    <h1>Kỷ niệm của chúng mình</h1>
+                    <p>Những chuyến đi, dấu mốc và khoảnh khắc đáng nhớ của hai đứa ❤️</p>
+                </div>
+
+                <div class="memories-action-bar">
+                    <button id="openAddMemoryBtn" class="main-button">
+                        ✨ Thêm kỷ niệm mới
+                    </button>
+                    <span class="memories-count-badge" id="memoriesCountBadge">0 kỷ niệm</span>
+                </div>
+
+                <!-- LƯỚI KỶ NIỆM (TIMELINE CARDS) -->
+                <div class="memories-grid" id="memoriesGrid">
+                    <!-- Render từ JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
              TRANG 5: ÂM NHẠC
         ============================================== -->
         <section id="musicPage" class="app-page">
@@ -746,6 +803,31 @@
                     </div>
                 </div>
 
+                <!-- 12.5 TƯƠNG TÁC BẰNG ĐIỂM TÌNH YÊU (TẶNG ĐIỂM) -->
+                <div class="gift-points-card">
+                    <div class="gift-card-header">
+                        <span class="gift-icon">🎁</span>
+                        <div>
+                            <h3>Tặng điểm tình yêu cho người ấy</h3>
+                            <p id="giftPointPartnerName">Gửi tặng điểm và lời nhắn ngọt ngào tới nửa kia</p>
+                        </div>
+                    </div>
+                    <div class="gift-quick-amounts">
+                        <button type="button" class="btn-gift-preset" data-gift="10">❤️ +10 điểm</button>
+                        <button type="button" class="btn-gift-preset" data-gift="50">💖 +50 điểm</button>
+                        <button type="button" class="btn-gift-preset" data-gift="100">👑 +100 điểm</button>
+                        <button type="button" class="btn-gift-preset btn-gift-penalty" data-gift="-10">💔 -10 điểm</button>
+                        <button type="button" class="btn-gift-preset btn-gift-penalty" data-gift="-50">🥺 -50 điểm</button>
+                    </div>
+                    <div class="gift-form-row">
+                        <input type="number" id="customGiftAmount" placeholder="Số điểm (+/-)" class="gift-amount-input" value="50">
+                        <input type="text" id="giftMessageInput" placeholder="Lời nhắn (VD: Thưởng vì ngoan, cảm ơn đã nấu cơm...)" class="reason-input gift-message-input">
+                        <button id="sendGiftPointsBtn" class="main-button small-btn">
+                            🎁 Gửi tặng ngay
+                        </button>
+                    </div>
+                </div>
+
                 <!-- LỊCH SỬ BIẾN ĐỘNG ĐIỂM -->
                 <div class="point-history-section">
                     <h3>📜 Nhật ký tình yêu gần đây</h3>
@@ -765,6 +847,47 @@
                     <span class="page-header-icon">💾</span>
                     <h1>Dữ liệu & Tự động lưu</h1>
                     <p>Mọi khoảnh khắc của hai bạn luôn được bảo vệ an toàn</p>
+                </div>
+
+                <!-- 12.2 KẾT NỐI HAI TÀI KHOẢN (REALTIME SYNC) -->
+                <div class="couple-sync-card">
+                    <div class="sync-card-header">
+                        <span class="sync-badge-icon">💞</span>
+                        <div>
+                            <h3>Không Gian Tình Yêu Của Hai Đứa</h3>
+                            <p>Đồng bộ dữ liệu hai chiều tức thì giữa hai điện thoại/máy tính</p>
+                        </div>
+                        <span id="realtimeConnectionBadge" class="connection-status-pill connected">🟢 Đang đồng bộ</span>
+                    </div>
+
+                    <div class="sync-room-box">
+                        <div class="room-code-display-group">
+                            <label>💕 Mã kết nối của hai bạn:</label>
+                            <div class="room-code-input-wrap">
+                                <input type="text" id="currentRoomCodeInput" value="LOVE-2026" class="room-code-field" readonly>
+                                <button id="copyRoomCodeBtn" class="sub-btn small-btn" title="Sao chép mã">📋 Copy</button>
+                            </div>
+                            <small>Gửi mã này cho người yêu để cùng kết nối vào một không gian chung!</small>
+                        </div>
+
+                        <div class="room-join-group">
+                            <label>🔗 Đổi mã hoặc tham gia phòng khác:</label>
+                            <div class="room-join-input-wrap">
+                                <input type="text" id="joinRoomCodeInput" placeholder="Nhập mã (VD: LOVE-2026)" class="room-code-field">
+                                <button id="joinRoomBtn" class="main-button small-btn">Tham gia 💕</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="couple-identity-bar">
+                        <div class="identity-info">
+                            <span>Thiết bị hiện tại: </span>
+                            <strong id="storageCurrentIdentity">👩 Như (Em)</strong>
+                        </div>
+                        <button id="storageSwitchUserBtn" class="sub-btn small-btn">
+                            🔄 Đổi sang tài khoản của Người yêu
+                        </button>
+                    </div>
                 </div>
 
                 <!-- TRẠNG THÁI AUTO-SAVE -->
@@ -881,7 +1004,76 @@
 </div>
 
 <!-- =====================================================
-     LIGHTBOX: XEM ẢNH LỚN
+     MODAL: THÊM KỶ NIỆM MỚI (MỤC 12.11)
+===================================================== -->
+<div id="addMemoryModal" class="popup-overlay">
+    <div class="popup-box memory-popup-box">
+        <button id="closeAddMemoryModalBtn" class="close-popup">×</button>
+        <div class="upload-modal-header">
+            <span class="upload-icon">📖</span>
+            <h2>Ghi dấu kỷ niệm mới</h2>
+            <p>Lưu lại những chuyến đi, cột mốc và khoảnh khắc đáng nhớ của hai đứa ❤️</p>
+        </div>
+
+        <div class="upload-form">
+            <div class="form-group">
+                <label for="memoryTitleInput">✨ Tiêu đề kỷ niệm:</label>
+                <input type="text" id="memoryTitleInput" placeholder="Ví dụ: Chuyến đi Đà Lạt đầu tiên cùng anh..." class="reason-input">
+            </div>
+
+            <div class="form-row-2">
+                <div class="form-group">
+                    <label for="memoryDateInput">📅 Ngày diễn ra:</label>
+                    <input type="date" id="memoryDateInput" class="love-date-input">
+                </div>
+                <div class="form-group">
+                    <label for="memoryLocationInput">📍 Địa điểm:</label>
+                    <input type="text" id="memoryLocationInput" placeholder="Ví dụ: Hồ Xuân Hương, Đà Lạt" class="reason-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>🥰 Cảm xúc:</label>
+                <div class="memory-emotion-selector" id="memoryEmotionSelector">
+                    <label class="emotion-radio"><input type="radio" name="memoryEmotion" value="🥰 Hạnh phúc" checked><span>🥰 Hạnh phúc</span></label>
+                    <label class="emotion-radio"><input type="radio" name="memoryEmotion" value="💕 Lãng mạn"><span>💕 Lãng mạn</span></label>
+                    <label class="emotion-radio"><input type="radio" name="memoryEmotion" value="✨ Đáng nhớ"><span>✨ Đáng nhớ</span></label>
+                    <label class="emotion-radio"><input type="radio" name="memoryEmotion" value="😂 Vui vẻ"><span>😂 Vui vẻ</span></label>
+                    <label class="emotion-radio"><input type="radio" name="memoryEmotion" value="🥺 Xúc động"><span>🥺 Xúc động</span></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>🖼️ Hình ảnh đại diện:</label>
+                <div class="photo-dropzone memory-photo-dropzone" id="memoryPhotoDropzone">
+                    <input type="file" id="memoryFileInput" accept="image/*" class="file-input-hidden">
+                    <div id="memoryDropEmpty" class="dropzone-empty">
+                        <span class="dropzone-icon">📷</span>
+                        <p>Nhấp vào đây để chọn ảnh kỷ niệm</p>
+                    </div>
+                    <div id="memoryDropPreview" class="dropzone-preview" style="display:none;">
+                        <img id="memoryPreviewImg" src="" alt="Memory Preview">
+                        <button type="button" id="removeMemoryPreviewBtn" class="remove-preview-btn">✕ Đổi ảnh khác</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="memoryStoryInput">✍️ Câu chuyện kỷ niệm:</label>
+                <textarea id="memoryStoryInput" rows="3" placeholder="Kể lại kỷ niệm hôm ấy của hai chúng mình..." class="reason-input"></textarea>
+            </div>
+
+            <div class="upload-actions">
+                <button id="saveMemoryBtn" class="main-button">
+                    Lưu vào Dòng Kỷ Niệm ❤️
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =====================================================
+     LIGHTBOX: XEM ẢNH LỚN & TƯƠNG TÁC (MỤC 12.10)
 ===================================================== -->
 <div id="galleryPopup" class="popup-overlay lightbox-overlay">
     <div class="gallery-popup-box lightbox-box">
@@ -896,9 +1088,40 @@
         </div>
 
         <div class="gallery-message lightbox-caption-wrap">
-            <span>💌</span>
+            <div class="lightbox-meta-row">
+                <span class="lightbox-author-badge" id="lightboxAuthorBadge">Đăng bởi Như</span>
+                <small id="galleryPopupDate" class="lightbox-date"></small>
+                <button id="lightboxDeletePhotoBtn" class="lightbox-delete-btn" title="Xóa bức ảnh này">🗑️ Xóa</button>
+            </div>
             <p id="galleryPopupMessage"></p>
-            <small id="galleryPopupDate" class="lightbox-date"></small>
+        </div>
+
+        <!-- 12.10 TƯƠNG TÁC TRÊN ẢNH: THẢ CẢM XÚC (REACTIONS) -->
+        <div class="photo-reactions-bar">
+            <button class="btn-photo-reaction" data-reaction="love" title="Yêu thích">
+                ❤️ <span class="reaction-count" id="countReactionLove">0</span>
+            </button>
+            <button class="btn-photo-reaction" data-reaction="cute" title="Dễ thương">
+                💕 <span class="reaction-count" id="countReactionCute">0</span>
+            </button>
+            <button class="btn-photo-reaction" data-reaction="happy" title="Hạnh phúc">
+                🥰 <span class="reaction-count" id="countReactionHappy">0</span>
+            </button>
+            <button class="btn-photo-reaction" data-reaction="funny" title="Vui vẻ">
+                😂 <span class="reaction-count" id="countReactionFunny">0</span>
+            </button>
+        </div>
+
+        <!-- 12.10 BÌNH LUẬN TRÊN ẢNH -->
+        <div class="photo-comments-container">
+            <h4>💬 Bình luận của chúng mình (<span id="photoCommentsCount">0</span>)</h4>
+            <div class="photo-comments-list" id="photoCommentsList">
+                <!-- Render từ JS -->
+            </div>
+            <div class="add-photo-comment-row">
+                <input type="text" id="photoCommentInput" placeholder="Để lại lời nhắn cho bức ảnh này..." class="comment-input-field">
+                <button id="sendPhotoCommentBtn" class="main-button small-btn">Gửi 💬</button>
+            </div>
         </div>
     </div>
 </div>
@@ -980,6 +1203,9 @@
 
 <!-- FLOATING FEEDBACK TOAST / POPPING HEARTS -->
 <div id="floatingToastContainer" class="floating-toast-container"></div>
+
+<!-- 12.7 THÔNG BÁO TƯƠNG TÁC THỜI GIAN THỰC TỪ NGƯỜI YÊU -->
+<div id="realtimeNotificationContainer" class="realtime-notification-container" aria-live="polite"></div>
 
 <script src="script.js"></script>
 </body>
